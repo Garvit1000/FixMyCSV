@@ -518,20 +518,20 @@ function App() {
                     <div className="flex items-center justify-between h-14 sm:h-16">
                         <div className="flex items-center space-x-2 sm:space-x-3">
                             <Database className="w-4 h-4 sm:w-5 sm:h-5 text-black" />
-                            <h1 className="text-base sm:text-lg font-medium text-black">Data Transformer</h1>
+                            <h1 className="text-base sm:text-lg font-medium text-black">FixMyCSVr</h1>
                         </div>
                         <nav className="hidden sm:flex items-center space-x-4 lg:space-x-6">
                             <a href="#" className="text-sm text-gray-600 hover:text-black transition-colors">Dashboard</a>
                             <a href="#" className="text-sm text-gray-600 hover:text-black transition-colors">Docs</a>
                             <a href="#" className="text-sm text-gray-600 hover:text-black transition-colors">Support</a>
                             <Button size="sm" className="bg-black hover:bg-gray-800 text-white text-sm h-8 px-3 sm:px-4 rounded-md">
-                                Get Started
+                                Soon
                             </Button>
                         </nav>
                         {/* Mobile menu button */}
                         <div className="sm:hidden">
                             <Button size="sm" className="bg-black hover:bg-gray-800 text-white text-xs h-7 px-3 rounded-md">
-                                Menu
+                                Soon
                             </Button>
                         </div>
                     </div>
