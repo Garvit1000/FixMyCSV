@@ -1,3 +1,23 @@
+@garvit @arnab bring you the almighty FixMyCSV 🙇
+
+A no-auth, browser-based tool that will let you:  
+-> Upload CSV or JSON instantly (stays on your computer, private).  
+-> Split and merge columns with one click.  
+-> Map values to clean up inconsistencies and remove duplicates in seconds. 
+-> See statistics plotted at a quick glance.
+-> Export your clean data as CSV or JSON.  
+-> Undo or redo every step safely.
+
+
+No logins, no installations, no hidden uploads.  
+Just drag, clean, and download.   
+
+We’d love for you to try it and let us know if anything breaks → https://fix-my-csv-two.vercel.app/
+
+RIP to the thought:  
+“Why isn’t there a quick tool for this?”  
+😂
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
