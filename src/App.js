@@ -514,119 +514,114 @@ function App() {
 
             {/* Header */}
             <header className="border-b border-gray-100 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="flex items-center justify-between h-16">
-
-                        {/* Brand */}
-                        <div className="flex items-center space-x-3">
-                            <Database className="w-5 h-5 text-black" />
-                            <h1 className="text-lg font-semibold text-black">FixMyCSV</h1>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
+                    <div className="flex items-center justify-between h-14 sm:h-16">
+                        <div className="flex items-center space-x-2 sm:space-x-3">
+                            <Database className="w-4 h-4 sm:w-5 sm:h-5 text-black" />
+                            <h1 className="text-base sm:text-lg font-medium text-black">Data Transformer</h1>
                         </div>
-
-                        {/* Navigation */}
-                        <nav className="flex items-center space-x-6">
+                        <nav className="hidden sm:flex items-center space-x-4 lg:space-x-6">
                             <a href="#" className="text-sm text-gray-600 hover:text-black transition-colors">Dashboard</a>
                             <a href="#" className="text-sm text-gray-600 hover:text-black transition-colors">Docs</a>
                             <a href="#" className="text-sm text-gray-600 hover:text-black transition-colors">Support</a>
-                            <a href="#stats" className="text-sm text-gray-600 hover:text-black transition-colors">Stats & Charts</a>
-
-                            {/* Roadmap Button */}
-                            <Button
-                                size="sm"
-                                className="bg-black hover:bg-gray-800 text-white text-sm h-8 px-4 rounded-md"
-                            >
-                                Roadmap
+                            <Button size="sm" className="bg-black hover:bg-gray-800 text-white text-sm h-8 px-3 sm:px-4 rounded-md">
+                                Get Started
                             </Button>
                         </nav>
+                        {/* Mobile menu button */}
+                        <div className="sm:hidden">
+                            <Button size="sm" className="bg-black hover:bg-gray-800 text-white text-xs h-7 px-3 rounded-md">
+                                Menu
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </header>
 
-
-            <div className="max-w-7xl mx-auto px-6 py-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 py-6 sm:py-8 lg:py-12">
                 {data.length === 0 ? (
                     /* Hero Section */
                     <div className="max-w-4xl mx-auto">
-                        <div className="text-center mb-12">
-                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-50 mb-6">
-                                <Database className="w-8 h-8 text-gray-900" />
+                        <div className="text-center mb-8 sm:mb-12">
+                            <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gray-50 mb-4 sm:mb-6">
+                                <Database className="w-6 h-6 sm:w-8 sm:h-8 text-gray-900" />
                             </div>
-                            <h2 className="text-4xl font-semibold text-black mb-4 tracking-tight">
+                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-black mb-3 sm:mb-4 tracking-tight px-4">
                                 Transform Your Data
                             </h2>
-                            <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+                            <p className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-4">
                                 Upload CSV, TSV, or JSON files to analyze and transform your datasets with professional-grade tools.
                             </p>
                         </div>
 
-                        <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
+                        <div className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 lg:p-8 shadow-sm">
                             <FileUpload onFileUpload={handleFileUpload} isLoading={isLoading} maxSize={100 * 1024 * 1024} />
                         </div>
                     </div>
                 ) : (
                     /* Main Application Layout */
-                    <div className="space-y-8">
+                    <div className="space-y-6 sm:space-y-8">
                         {/* Stats Overview */}
                         {dataSummary && (
-                            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+                                <div className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6">
                                     <div className="flex items-center justify-between">
                                         <div>
-                                            <p className="text-sm text-gray-500">Rows</p>
-                                            <p className="text-2xl font-semibold text-black mt-1">{dataSummary.totalRows.toLocaleString()}</p>
+                                            <p className="text-xs sm:text-sm text-gray-500">Rows</p>
+                                            <p className="text-lg sm:text-2xl font-semibold text-black mt-1">{dataSummary.totalRows.toLocaleString()}</p>
                                         </div>
-                                        <Database className="w-4 h-4 text-gray-400" />
+                                        <Database className="w-3 h-3 sm:w-4 sm:h-4 text-gray-400" />
                                     </div>
                                 </div>
-                                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                                <div className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6">
                                     <div className="flex items-center justify-between">
                                         <div>
-                                            <p className="text-sm text-gray-500">Columns</p>
-                                            <p className="text-2xl font-semibold text-black mt-1">{dataSummary.totalColumns}</p>
+                                            <p className="text-xs sm:text-sm text-gray-500">Columns</p>
+                                            <p className="text-lg sm:text-2xl font-semibold text-black mt-1">{dataSummary.totalColumns}</p>
                                         </div>
-                                        <BarChart3 className="w-4 h-4 text-gray-400" />
+                                        <BarChart3 className="w-3 h-3 sm:w-4 sm:h-4 text-gray-400" />
                                     </div>
                                 </div>
-                                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                                <div className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6">
                                     <div className="flex items-center justify-between">
                                         <div>
-                                            <p className="text-sm text-gray-500">Size</p>
-                                            <p className="text-2xl font-semibold text-black mt-1">{dataSummary.fileSize}</p>
+                                            <p className="text-xs sm:text-sm text-gray-500">Size</p>
+                                            <p className="text-lg sm:text-2xl font-semibold text-black mt-1">{dataSummary.fileSize}</p>
                                         </div>
-                                        <Activity className="w-4 h-4 text-gray-400" />
+                                        <Activity className="w-3 h-3 sm:w-4 sm:h-4 text-gray-400" />
                                     </div>
                                 </div>
-                                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                                <div className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6">
                                     <div className="flex items-center justify-between">
                                         <div>
-                                            <p className="text-sm text-gray-500">Type</p>
-                                            <p className="text-2xl font-semibold text-black mt-1 uppercase">{fileType || 'N/A'}</p>
+                                            <p className="text-xs sm:text-sm text-gray-500">Type</p>
+                                            <p className="text-lg sm:text-2xl font-semibold text-black mt-1 uppercase">{fileType || 'N/A'}</p>
                                         </div>
-                                        <TrendingUp className="w-4 h-4 text-gray-400" />
+                                        <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4 text-gray-400" />
                                     </div>
                                 </div>
                             </div>
                         )}
 
-                        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                        <div className="grid grid-cols-1 xl:grid-cols-4 gap-6 sm:gap-8">
                             {/* Main Content */}
-                            <div className="lg:col-span-3 space-y-8">
+                            <div className="xl:col-span-3 space-y-6 sm:space-y-8">
                                 {/* File Upload */}
-                                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                                <div className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6">
                                     <FileUpload onFileUpload={handleFileUpload} isLoading={isLoading} maxSize={100 * 1024 * 1024} />
                                 </div>
 
                                 {/* Data Table */}
                                 <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
-                                    <div className="px-6 py-4 border-b border-gray-100">
-                                        <div className="flex items-center justify-between">
-                                            <div className="flex items-center space-x-3">
-                                                <h3 className="text-lg font-medium text-black">Data</h3>
+                                    <div className="px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-100">
+                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between space-y-3 sm:space-y-0">
+                                            <div className="flex items-center space-x-2 sm:space-x-3">
+                                                <h3 className="text-base sm:text-lg font-medium text-black">Data</h3>
                                                 <div className="flex items-center space-x-2">
                                                 <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-gray-100 text-gray-700">
                                                     {data.length} rows
                                                 </span>
-                                                    <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-gray-100 text-gray-700">
+                                                    <span className="hidden sm:inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-gray-100 text-gray-700 truncate max-w-32">
                                                     {fileName}
                                                 </span>
                                                 </div>
@@ -636,7 +631,7 @@ function App() {
                                                     variant="outline"
                                                     size="sm"
                                                     onClick={() => exportData('csv')}
-                                                    className="text-sm h-8 px-3 border-gray-200 text-gray-700 hover:bg-gray-50"
+                                                    className="text-xs sm:text-sm h-7 sm:h-8 px-2 sm:px-3 border-gray-200 text-gray-700 hover:bg-gray-50"
                                                 >
                                                     <Download className="w-3 h-3 mr-1" />
                                                     CSV
@@ -645,7 +640,7 @@ function App() {
                                                     variant="outline"
                                                     size="sm"
                                                     onClick={() => exportData('json')}
-                                                    className="text-sm h-8 px-3 border-gray-200 text-gray-700 hover:bg-gray-50"
+                                                    className="text-xs sm:text-sm h-7 sm:h-8 px-2 sm:px-3 border-gray-200 text-gray-700 hover:bg-gray-50"
                                                 >
                                                     <Download className="w-3 h-3 mr-1" />
                                                     JSON
@@ -654,7 +649,7 @@ function App() {
                                         </div>
                                     </div>
 
-                                    <div className="px-6 py-4 border-b border-gray-100 bg-gray-50/50">
+                                    <div className="px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-100 bg-gray-50/50 overflow-x-auto">
                                         <TransformationToolbar
                                             columns={columns}
                                             onSplitColumn={splitColumn}
@@ -664,29 +659,29 @@ function App() {
                                         />
                                     </div>
 
-                                    <div className="overflow-hidden">
+                                    <div className="overflow-x-auto">
                                         <DataPreview data={data} columns={columns} />
                                     </div>
                                 </div>
 
                                 {/* Visualization */}
                                 <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
-                                    <div className="px-6 py-4 border-b border-gray-100">
-                                        <div className="flex items-center justify-between">
-                                            <div className="flex items-center space-x-3">
-                                                <BarChart3 className="w-5 h-5 text-gray-600" />
+                                    <div className="px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-100">
+                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between space-y-3 sm:space-y-0">
+                                            <div className="flex items-center space-x-2 sm:space-x-3">
+                                                <BarChart3 className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
                                                 <div>
-                                                    <h3 className="text-lg font-medium text-black">Visualization</h3>
-                                                    <p className="text-sm text-gray-500">Data distribution</p>
+                                                    <h3 className="text-base sm:text-lg font-medium text-black">Visualization</h3>
+                                                    <p className="text-xs sm:text-sm text-gray-500">Data distribution</p>
                                                 </div>
                                             </div>
 
-                                            <div className="flex items-center space-x-3">
-                                                <label htmlFor="column-select" className="text-sm font-medium text-gray-700">
+                                            <div className="flex items-center space-x-2 sm:space-x-3">
+                                                <label htmlFor="column-select" className="text-xs sm:text-sm font-medium text-gray-700 whitespace-nowrap">
                                                     Column
                                                 </label>
                                                 <Select value={selectedColumn} onValueChange={setSelectedColumn}>
-                                                    <SelectTrigger className="w-40 h-8 text-sm border-gray-200">
+                                                    <SelectTrigger className="w-32 sm:w-40 h-7 sm:h-8 text-xs sm:text-sm border-gray-200">
                                                         <SelectValue placeholder="Select" />
                                                     </SelectTrigger>
                                                     <SelectContent>
@@ -694,7 +689,7 @@ function App() {
                                                             <SelectItem
                                                                 key={column.accessorKey}
                                                                 value={column.accessorKey}
-                                                                className="text-sm"
+                                                                className="text-xs sm:text-sm"
                                                             >
                                                                 {column.header}
                                                             </SelectItem>
@@ -705,8 +700,8 @@ function App() {
                                         </div>
 
                                         {selectedColumn && (
-                                            <div className="mt-4 p-3 bg-gray-50 rounded-md border border-gray-100">
-                                                <p className="text-sm text-gray-600">
+                                            <div className="mt-3 sm:mt-4 p-3 bg-gray-50 rounded-md border border-gray-100">
+                                                <p className="text-xs sm:text-sm text-gray-600">
                                                     Distribution for{' '}
                                                     <span className="font-medium text-black">
                                                     {columns.find(col => col.accessorKey === selectedColumn)?.header}
@@ -717,14 +712,14 @@ function App() {
                                         )}
                                     </div>
 
-                                    <div className="p-6">
+                                    <div className="p-4 sm:p-6">
                                         {chartData ? (
                                             <ChartVisualization data={chartData} type={chartType} />
                                         ) : (
-                                            <div className="flex items-center justify-center h-64 border border-dashed border-gray-200 rounded-lg">
-                                                <div className="text-center">
-                                                    <BarChart3 className="w-8 h-8 text-gray-400 mx-auto mb-3" />
-                                                    <p className="text-sm text-gray-500">Select a column to visualize data</p>
+                                            <div className="flex items-center justify-center h-48 sm:h-64 border border-dashed border-gray-200 rounded-lg">
+                                                <div className="text-center px-4">
+                                                    <BarChart3 className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400 mx-auto mb-2 sm:mb-3" />
+                                                    <p className="text-xs sm:text-sm text-gray-500">Select a column to visualize data</p>
                                                 </div>
                                             </div>
                                         )}
@@ -733,12 +728,12 @@ function App() {
                             </div>
 
                             {/* Sidebar */}
-                            <div className="lg:col-span-1">
-                                <div className="bg-white border border-gray-200 rounded-lg overflow-hidden sticky top-24">
-                                    <div className="px-4 py-3 border-b border-gray-100 bg-gray-50/50">
+                            <div className="xl:col-span-1">
+                                <div className="bg-white border border-gray-200 rounded-lg overflow-hidden sticky top-20 sm:top-24">
+                                    <div className="px-3 sm:px-4 py-2 sm:py-3 border-b border-gray-100 bg-gray-50/50">
                                         <div className="flex items-center space-x-2">
-                                            <Activity className="w-4 h-4 text-gray-600" />
-                                            <h3 className="font-medium text-black text-sm">History</h3>
+                                            <Activity className="w-3 h-3 sm:w-4 sm:h-4 text-gray-600" />
+                                            <h3 className="font-medium text-black text-xs sm:text-sm">History</h3>
                                         </div>
                                     </div>
                                     <ActionHistory
