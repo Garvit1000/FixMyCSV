@@ -1,13 +1,12 @@
-@garvit @arnab bring you the almighty FixMyCSV 🙇
+@garvit @arnab bring you the almighty # FixMyCSV 🙇
 
 A no-auth, browser-based tool that will let you:  
--> Upload CSV or JSON instantly (stays on your computer, private).  
+-> Upload CSV or JSON instantly (stays on your computer, private). 
 -> Split and merge columns with one click.  
 -> Map values to clean up inconsistencies and remove duplicates in seconds. 
 -> See statistics plotted at a quick glance.
 -> Export your clean data as CSV or JSON.  
 -> Undo or redo every step safely.
-
 
 No logins, no installations, no hidden uploads.  
 Just drag, clean, and download.   
