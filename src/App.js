@@ -518,7 +518,7 @@ function App() {
                     <div className="flex items-center justify-between h-14 sm:h-16">
                         <div className="flex items-center space-x-2 sm:space-x-3">
                             <Database className="w-4 h-4 sm:w-5 sm:h-5 text-black" />
-                            <h1 className="text-base sm:text-lg font-medium text-black">FixMyCSVr</h1>
+                            <h1 className="text-base sm:text-lg font-medium text-black">FixMyCSV</h1>
                         </div>
                         <nav className="hidden sm:flex items-center space-x-4 lg:space-x-6">
                             <a href="#" className="text-sm text-gray-600 hover:text-black transition-colors">Dashboard</a>
