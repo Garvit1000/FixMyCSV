@@ -529,7 +529,7 @@ function Home() {
                             </Link>
                         </nav>
                         {/* Mobile menu button */}
-                        <div className="sm:hidden">
+                        <div className="sm:hidden space-x-4">
                             <a href="/docs" className="text-sm text-gray-600 hover:text-black transition-colors">Docs</a>
                             <Link to="/roadmap">
                                 <Button size="sm" className="bg-black hover:bg-gray-800 text-white text-xs h-7 px-3 rounded-md">
