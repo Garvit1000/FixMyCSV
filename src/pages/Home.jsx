@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import Papa from 'papaparse';
 import { saveAs } from 'file-saver';
+import { Link } from 'react-router-dom';
 
 // Components
 import FileUpload from '../components/FileUpload';
@@ -517,21 +518,24 @@ function Home() {
                     <div className="flex items-center justify-between h-14 sm:h-16">
                         <div className="flex items-center space-x-2 sm:space-x-3">
                             <Database className="w-4 h-4 sm:w-5 sm:h-5 text-black" />
-                            <h1 className="text-base sm:text-lg font-medium text-black">FixMyCSV</h1>
+                            <h1 className="text-lg font-semibold text-black">FixMyCSV</h1>
                         </div>
                         <nav className="hidden sm:flex items-center space-x-4 lg:space-x-6">
-                            <a href="#" className="text-sm text-gray-600 hover:text-black transition-colors">Dashboard</a>
                             <a href="/docs" className="text-sm text-gray-600 hover:text-black transition-colors">Docs</a>
-                            <a href="#" className="text-sm text-gray-600 hover:text-black transition-colors">Support</a>
-                            <Button size="sm" className="bg-black hover:bg-gray-800 text-white text-sm h-8 px-3 sm:px-4 rounded-md">
-                                Soon
-                            </Button>
+                            <Link to="/roadmap">
+                                <Button size="sm" className="bg-black hover:bg-gray-800 text-white text-sm h-8 px-3 sm:px-4 rounded-md">
+                                    Roadmap
+                                </Button>
+                            </Link>
                         </nav>
                         {/* Mobile menu button */}
                         <div className="sm:hidden">
-                            <Button size="sm" className="bg-black hover:bg-gray-800 text-white text-xs h-7 px-3 rounded-md">
-                                Soon
-                            </Button>
+                            <a href="/docs" className="text-sm text-gray-600 hover:text-black transition-colors">Docs</a>
+                            <Link to="/roadmap">
+                                <Button size="sm" className="bg-black hover:bg-gray-800 text-white text-xs h-7 px-3 rounded-md">
+                                    Roadmap
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </div>
