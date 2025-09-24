@@ -152,23 +152,23 @@ const TransformationToolbar = ({
                         </Button>
                     </DialogTrigger>
 
-                    <DialogContent className="sm:max-w-md">
+                    <DialogContent className="sm:max-w-md z-[100]">
                         <DialogHeader>
                             <DialogTitle>Split Column</DialogTitle>
                             <DialogDescription>Divide a column into multiple columns using a delimiter.</DialogDescription>
                         </DialogHeader>
 
                         <div className="space-y-4">
-                            <div>
+                            <div className="relative z-[110]">
                                 <Label htmlFor="split-column">Select Column</Label>
                                 <Select
                                     value={splitConfig.columnIndex}
                                     onValueChange={(value) => setSplitConfig({ ...splitConfig, columnIndex: value })}
                                 >
-                                    <SelectTrigger className="w-full" aria-label="Select column to split">
+                                    <SelectTrigger className="w-full relative z-[110]" aria-label="Select column to split">
                                         <SelectValue placeholder={columns.length ? 'Choose column to split' : 'No columns available'} />
                                     </SelectTrigger>
-                                    <SelectContent>
+                                    <SelectContent className="z-[120] bg-white border border-gray-200 shadow-lg">
                                         {columns.length ? (
                                             columns.map((col, index) => (
                                                 <SelectItem key={index} value={index.toString()}>
@@ -212,7 +212,7 @@ const TransformationToolbar = ({
                         </Button>
                     </DialogTrigger>
 
-                    <DialogContent className="sm:max-w-md">
+                    <DialogContent className="sm:max-w-md z-[100]">
                         <DialogHeader>
                             <DialogTitle>Merge Columns</DialogTitle>
                             <DialogDescription>Combine multiple columns into a single column with a separator.</DialogDescription>
@@ -295,23 +295,23 @@ const TransformationToolbar = ({
                         </Button>
                     </DialogTrigger>
 
-                    <DialogContent className="sm:max-w-md">
+                    <DialogContent className="sm:max-w-md z-[100]">
                         <DialogHeader>
                             <DialogTitle>Map Values</DialogTitle>
                             <DialogDescription>Replace specific values in a column with new values.</DialogDescription>
                         </DialogHeader>
 
                         <div className="space-y-4">
-                            <div>
+                            <div className="relative z-[110]">
                                 <Label htmlFor="map-column">Select Column</Label>
                                 <Select
                                     value={mapConfig.columnIndex}
                                     onValueChange={(value) => setMapConfig({ ...mapConfig, columnIndex: value })}
                                 >
-                                    <SelectTrigger className="w-full" aria-label="Select column to map">
+                                    <SelectTrigger className="w-full relative z-[110]" aria-label="Select column to map">
                                         <SelectValue placeholder={columns.length ? 'Choose column to map' : 'No columns available'} />
                                     </SelectTrigger>
-                                    <SelectContent>
+                                    <SelectContent className="z-[120] bg-white border border-gray-200 shadow-lg">
                                         {columns.length ? (
                                             columns.map((col, index) => (
                                                 <SelectItem key={index} value={index.toString()}>
@@ -356,7 +356,7 @@ const TransformationToolbar = ({
                         </Button>
                     </DialogTrigger>
 
-                    <DialogContent className="sm:max-w-md">
+                    <DialogContent className="sm:max-w-md z-[100]">
                         <DialogHeader>
                             <DialogTitle>Remove Duplicates</DialogTitle>
                             <DialogDescription>Remove duplicate rows based on selected columns.</DialogDescription>
