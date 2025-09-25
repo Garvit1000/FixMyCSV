@@ -1,89 +1,95 @@
-@garvit @arnab bring you the almighty # FixMyCSV 🙇
+# FixMyCSV
 
-A no-auth, browser-based tool that will let you:  
--> Upload CSV or JSON instantly (stays on your computer, private).\
--> Split and merge columns with one click.\
--> Map values to clean up inconsistencies and remove duplicates in seconds.\
--> See statistics plotted at a quick glance.\
--> Export your clean data as CSV or JSON.\
--> Undo or redo every step safely.\
+FixMyCSV is a modern web tool to upload, analyze, and transform your **CSV, TSV, or JSON** datasets with professional-grade tools.  
+It provides instant previews, smart transformations, and visualizations so you can clean and understand your data faster.
 
-No logins, no installations, no hidden uploads.  
-Just drag, clean, and download.   
+---
 
-We’d love for you to try it and let us know if anything breaks → https://fix-my-csv-two.vercel.app/
+## 🚀 Features
 
-RIP to the thought:  
-“Why isn’t there a quick tool for this?”  
-😂
+- 📂 Upload **CSV, TSV, or JSON** files  
+- 📊 Interactive charts & statistics  
+- 🔍 Smart column detection and filtering  
+- ⚡ Drag-and-drop file upload  
+- 🛠️ Built with **React + Tailwind + shadcn/ui** for a modern, polished UI  
+- 🌐 Ready to deploy on **Vercel** or any static hosting  
 
-# Getting Started with Create React App
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📦 Installation
 
-## Available Scripts
+Clone the repository and install dependencies:
 
-In the project directory, you can run:
+```bash
+git clone https://github.com/yourusername/fixmycsv.git
+cd fixmycsv
+npm install --legacy-peer-deps
+```
 
-### `npm start`
+ 🖥️ Development
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Start the development server:
+```bash
+npm run dev
+```
 
-### `npm test`
+Then open http://localhost:3000
+ in your browser.
+ 
+📦 Build (production)
+Create a production build:
+```bash
+npm run build
+```
+Preview the production build locally (if you have a preview script):
+```bash
+npm run preview
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Deployment: Works well on Vercel / Netlify / static hosts. If deploying to Vercel, ensure your build command matches npm run build and the output directory is build/ (default for CRA/CRACO).
 
-### `npm run build`
+Usage examples (short)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Quick clean marketing leads
+Upload leads.csv.
+Map fb, FB, facebook-paid → Facebook.
+Dedupe by email (keep most recent).
+Export cleaned CSV.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Split & normalize
+Upload users.csv.
+Split FullName by first space → FirstName, LastName.
+Trim whitespace and standardize casing.
+Export JSON or CSV
+.
+ 🛠️ Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+React (v19)
 
-### `npm run eject`
+Tailwind CSS
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+shadcn/ui components
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+PapaParse (CSV parsing)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Chart.js + react-chartjs-2 (charts)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Dexie (IndexedDB) for local saves 
 
-## Learn More
+Web Workers for heavy parsing/dedupe tasks
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🤝 Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions are welcome!
+Please open an issue or submit a pull request.
+```bash
+git checkout -b feat/your-feature
+npm install --legacy-peer-deps
+npm run dev
+```
+# implement changes, run tests, then:
+```bash
+git commit -am "feat: add ..."
+git push origin feat/your-feature
+```
