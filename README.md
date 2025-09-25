@@ -21,8 +21,8 @@ It provides instant previews, smart transformations, and visualizations so you c
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/yourusername/fixmycsv.git
-cd fixmycsv
+git clone https://github.com/Garvit1000/FixMyCSV.git
+cd FixMyCSV
 npm install --legacy-peer-deps
 ```
 
