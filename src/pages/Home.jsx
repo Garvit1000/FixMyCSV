@@ -765,7 +765,7 @@ function Home() {
                     },
                     {
                         icon: <GithubIcon className="h-4 w-4" />,
-                        href: "https://github.com",
+                        href: "https://github.com/Garvit1000/FixMyCSV",
                         label: "GitHub",
                     },
                 ]}
